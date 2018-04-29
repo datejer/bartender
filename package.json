@@ -1,7 +1,7 @@
 
 {
-  "name": "Memester",
-  "description": "Memester discord bot by ejer. Designed for Meme Pub",
+  "name": "Bartender",
+  "description": "Bartender discord bot by ejer.",
   "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
