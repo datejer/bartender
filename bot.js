@@ -41,7 +41,7 @@ client.on('message', message => {
 	if (!message.guild) return;
 
 	if (message.content === 'b!help') {
-        const cmds = "```b!help \nb!invite \nb!website \nb!changelog```";
+        const cmds = "```b!help \nb!invite \nb!website \nb!server \nb!changelog```";
         const menu = "```b!coffee \nb!beer \nb!whisky \nb!manhattan \nb!martini \nb!margarita \nb!mojito \nb!bloody mary \nb!mai tai \nb!tequila \nb!vodka \nb!old fashioned```";
         const snacks = "```b!chips \nb!breadsticks \nb!crackers \nb!peanuts \nb!popcorn```";
         message.channel.send(`⌨ **My Commands:** 📟` + cmds + `🍷 **My Menu:** 🍹` + menu + `🍿 **My Snacks:** 🥜` + snacks);
@@ -261,6 +261,9 @@ client.on('message', message => {
     }
     if (message.content === "b!website") {
 		message.channel.send(`__Here's a link to the website:__ \nhttp://bartender.rf.gd/`);
+    }
+    if (message.content === "b!server") {
+		message.channel.send(`__Here's an invite to the official support server:__ \nhttps://discord.gg/UDTXjbR`);
     }
 });
 
