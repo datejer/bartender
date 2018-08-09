@@ -286,7 +286,7 @@ client.on('message', message => {
 
 				} else {
 					setTimeout(function(){
-						user.send(ennembed)
+						user.send({ennembed})
 					},
 					250 * index);
 				}
