@@ -265,6 +265,36 @@ client.on('message', message => {
     if (message.content === "b!server") {
 		message.channel.send(`__Here's an invite to the official support server:__ \nhttps://discord.gg/UDTXjbR`);
     }
+	if (message.content === "b!announcement1") {
+		if(message.author.id !== "214651290234388480") return;
+
+		let ennembed = new Discord.RichEmbed()
+		.setTitle("Announcement :tada:")
+		.setDescription("This message is sent automaticly, sorry for any inconvenience.")
+		.setColor("80FF00")
+		.setTimestamp()
+		.setFooter("Bartender | Created by ejer", "https://cdn.discordapp.com/avatars/440121235410649108/0e4e1e7d68d178e304c279f9fa1f9630.png")
+		.setImage("https://i.imgur.com/81eaxn6.png")
+		.setAuthor("ejer", "https://cdn.discordapp.com/avatars/214651290234388480/0c994a0c5b16eed434a3c3d1c9f79077.png")
+		.addField("Official Support Server :eyes: ", "We have launched our official support Discord server! :tada:\nIf you want to report any bugs or have a suggestion please join the server! :bug:\nDon't miss out on any polls or announcements! :loudspeaker:  \nIt's also a great way to contact the owner for any help! :wave: ", false)
+		.addField("Join now! :thumbsup:  ", "https://discord.gg/UDTXjbR", false)
+
+		var userList = client.users.array();
+		try {
+			userList.forEach(function(user, index) {
+				if (user.bot) {
+
+				} else {
+					setTimeout(function(){
+						user.send(ennembed)
+					},
+					250 * index);
+				}
+			});
+		} catch (err) {
+			console.log("Could not send message to " + user.name);
+		}
+	}
 });
 
 
