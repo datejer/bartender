@@ -250,6 +250,18 @@ client.on('message', message => {
              });
 		}, 5000);
     }
+    if (message.content === 'b!rum') {
+    	let rn = Math.floor(Math.random() * 5) + 1;
+		message.channel.send(`Your Rum Is Being Made. *Please Wait.*`);
+		setTimeout(function() {
+		    message.channel.send(`Here You Go Sir. 🥃`, {files: ["./img/rum" + rn + ".jpg"]}).then(function (message) {
+              message.react("👍")
+              message.react("👎")
+            }).catch(function() {
+              //Something
+             });
+		}, 5000);
+    }
     if (message.content === "<@440121235410649108>") {
 		message.channel.send(`*Yes?*`);
     }
@@ -263,7 +275,7 @@ client.on('message', message => {
 		message.channel.send(`__Here's a link to the website:__ \nhttp://bartender.rf.gd/`);
     }
     if (message.content === "b!server") {
-		message.channel.send(`__Here's an invite to the official support server:__ \nhttps://discord.gg/UDTXjbR`);
+		message.channel.send(`__Sorry! The server is no longer available.__`);
     }
 });
 
