@@ -42,7 +42,7 @@ client.on('message', message => {
 
 	if (message.content === 'b!help') {
         const cmds = "```b!help \nb!invite \nb!website \nb!server \nb!changelog```";
-        const menu = "```b!coffee \nb!beer \nb!whisky \nb!manhattan \nb!martini \nb!margarita \nb!mojito \nb!bloody mary \nb!mai tai \nb!tequila \nb!vodka \nb!old fashioned```";
+        const menu = "```b!coffee \nb!beer \nb!whisky \nb!manhattan \nb!martini \nb!margarita \nb!mojito \nb!bloody mary \nb!mai tai \nb!tequila \nb!vodka \nb!old fashioned \nb!rum```";
         const snacks = "```b!chips \nb!breadsticks \nb!crackers \nb!peanuts \nb!popcorn```";
         message.channel.send(`⌨ **My Commands:** 📟` + cmds + `🍷 **My Menu:** 🍹` + menu + `🍿 **My Snacks:** 🥜` + snacks);
     }
