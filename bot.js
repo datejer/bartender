@@ -279,6 +279,21 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+	if(message.author.bot) return;
+	if (!message.guild) return;
+	
+	if (message.content.startsWith("b!")) {
+		console.log("[CMD] " + message.author.tag + ": " + message.content);
+	}
+});
+
+client.on('message', message => {
+	if(message.author.bot) return;
+	if (message.guild) return;
+
+	console.log("[DM] " + message.author.tag + ": " + message.content);
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
