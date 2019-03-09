@@ -275,7 +275,7 @@ client.on('message', message => {
 		message.channel.send(`__Here's a link to the website:__ \nhttp://bartender.rf.gd/`);
     }
     if (message.content === "b!server") {
-		message.channel.send(`__Sorry! The server is no longer available.__`);
+		message.channel.send(`__Here's an invite to the server:__ \nhttps://discord.gg/JSRTVDR`);
     }
 });
 
