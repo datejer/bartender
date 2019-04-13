@@ -41,7 +41,7 @@ client.on('message', message => {
 	if (!message.guild) return;
 
 	if (message.content === 'b!help') {
-        const cmds = "```b!help \nb!invite \nb!website \nb!server \nb!changelog```";
+        const cmds = "```b!help \nb!invite \nb!website \nb!server \nb!changelog \nb!donate```";
         const menu = "```b!coffee \nb!beer \nb!whisky \nb!manhattan \nb!martini \nb!margarita \nb!mojito \nb!bloody mary \nb!mai tai \nb!tequila \nb!vodka \nb!old fashioned \nb!rum```";
         const snacks = "```b!chips \nb!breadsticks \nb!crackers \nb!peanuts \nb!popcorn```";
         message.channel.send(`⌨ **My Commands:** 📟` + cmds + `🍷 **My Menu:** 🍹` + menu + `🍿 **My Snacks:** 🥜` + snacks);
@@ -276,6 +276,9 @@ client.on('message', message => {
     }
     if (message.content === "b!server") {
 		message.channel.send(`__Here's an invite to the server:__ \nhttps://discord.gg/JSRTVDR`);
+    }
+    if (message.content === "b!donate") {
+		message.channel.send(`__You can donate to help us keep the bot alive using this link:__ \nhttp://donate.ejer.ga/`);
     }
 });
 
